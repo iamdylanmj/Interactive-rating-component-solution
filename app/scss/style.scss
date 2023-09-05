@@ -1,0 +1,200 @@
+@use "./util/" as util;
+@forward "./global/";
+
+// main container styling
+.main-cont {
+  background-color: var(--Dark-Blue);
+  width: 88%;
+  min-width: 320px;
+  height: 45vh;
+  max-height: 350px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  // this represent min width
+  @include util.breakpoint(larger, medium-L) {
+    max-width: 320px;
+  }
+
+  // ========================================================
+  // front page styling starts here
+  // outer styling
+  &__outer {
+    // border: 1px solid white;
+    width: 90%;
+    height: 90%;
+
+    // image icon styling
+    &-img {
+      background-color: var(--Dark-Blue-bg);
+      background-image: url("../..images/icon-star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      scale: 0.9;
+    }
+    // title h2 styling
+    &-h2 {
+      font-weight: 700;
+      margin-top: 0.8em;
+    }
+    // paragraph styling
+    &-p {
+      color: var(--Light-Grey);
+      font-size: 0.9rem;
+      margin-top: 15px;
+      line-height: 1.4em;
+    }
+    &-rate {
+      list-style: none;
+      width: 100%;
+      height: 45px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      &-li {
+        //border: 1px solid green;
+        background-color: var(--Dark-Blue-bg);
+        color: var(--Light-Grey);
+        font-size: 0.9em;
+        font-weight: 700;
+        width: 45px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s, color 0.2s;
+        -webkit-transition: background-color 0.2s, color 0.2s;
+        -moz-transition: background-color 0.2s, color 0.2s;
+        -ms-transition: background-color 0.2s, color 0.2s;
+        -o-transition: background-color 0.2s, color 0.2s;
+      }
+      &-li:hover {
+        background-color: var(--Light-Grey);
+        color: var(--White);
+        cursor: pointer;
+      }
+    }
+    &-btn {
+      width: 100%;
+      padding: 14px 20px;
+      margin-top: 25px;
+      background-color: var(--Orange);
+      border: none;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: 25px;
+      color: var(--White);
+      font-weight: 700;
+      font-family: util.$font;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: background-color 0.2s, color 0.2s;
+      -webkit-transition: background-color 0.2s, color 0.2s;
+      -moz-transition: background-color 0.2s, color 0.2s;
+      -ms-transition: background-color 0.2s, color 0.2s;
+      -o-transition: background-color 0.2s, color 0.2s;
+    }
+    &-btn:hover {
+      background-color: var(--White);
+      color: var(--Orange);
+      cursor: pointer;
+    }
+  }
+
+  // front page styling finishes here
+  // =====================================================
+
+  // thank you page styling starts here
+  // =====================================================
+  &__respond-outer {
+    background-color: var(--Dark-Blue);
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    display: none;
+
+    &-img {
+      background-image: url("../../images/illustration-thank-you.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      scale: 0.9;
+      height: 8em;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    // response message section
+    &-msg {
+      background-color: var(--Dark-Blue-bg);
+      width: 64%;
+      height: 30px;
+      color: var(--Orange);
+      font-size: 0.9rem;
+      letter-spacing: 0.02rem;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      margin: 15px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // thank you message
+    &-h2 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 700;
+      letter-spacing: 0.04rem;
+    }
+
+    // message for users
+    &-text {
+      text-align: center;
+      color: var(--Light-Grey);
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: var(--Light-Grey);
+
+  & a:first-child {
+    color: var(--Orange);
+  }
+  & a:link {
+    color: var(--White);
+  }
+}

@@ -1,0 +1,28 @@
+// 700px, 900px , 1440px
+
+// sass maps - this keeps related values at a same place
+$breakpoints-up : (
+    // larger screens
+    'medium-L' : 375px,
+    'large-L' : 900px,
+    'exLarge-L' : 1440px,
+
+    // smaller screens
+    'medium' : 699px,
+    'large' : 899px,
+    'exLarge' : 1339px
+);
+
+$property-val : (
+    'smaller': 'max-width',
+    'larger' : 'min-width'
+);
+
+// sass mixins, things we use repeatedly wrapped at a one place
+@mixin breakpoint($property, $size){
+    @media (map-get($property-val, $property): map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+
