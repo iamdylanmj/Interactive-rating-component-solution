@@ -35,7 +35,8 @@
     // image icon styling
     &-img {
       background-color: var(--Dark-Blue-bg);
-      background-image: url("../..images/icon-star.svg");
+      // background-image: url("../../images/icon-star.svg");
+      background-image: url("../images/icon-star.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 40px;
@@ -136,7 +137,7 @@
     display: none;
 
     &-img {
-      background-image: url("../../images/illustration-thank-you.svg");
+      background-image: url("../images/illustration-thank-you.svg");
       background-repeat: no-repeat;
       background-position: center;
       scale: 0.9;

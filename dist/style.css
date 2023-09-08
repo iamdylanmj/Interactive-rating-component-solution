@@ -78,7 +78,7 @@ p {
 }
 .main-cont__outer-img {
   background-color: var(--Dark-Blue-bg);
-  background-image: url("../..images/icon-star.svg");
+  background-image: url("../images/icon-star.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -168,7 +168,7 @@ p {
   display: none;
 }
 .main-cont__respond-outer-img {
-  background-image: url("../../images/illustration-thank-you.svg");
+  background-image: url("../images/illustration-thank-you.svg");
   background-repeat: no-repeat;
   background-position: center;
   scale: 0.9;
