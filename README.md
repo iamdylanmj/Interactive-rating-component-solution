@@ -92,11 +92,26 @@ const btn = document.querySelector('.main-cont__outer-btn');
 const respond = document.querySelector('.main-cont__respond-outer');
 const rateVal = document.getElementById('updateRate');
 
+let selectedListItem = null;
+
 // listening to the click event on list items
 ul.addEventListener('click', e => {
     if(e.target.nodeName === 'LI') {
-     e.target.style.backgroundColor = "var(--Orange)";   
-     e.target.style.color = "var(--White)";   
+
+        // reset colors to default colors
+        if(selectedListItem) {
+            selectedListItem.style.backgroundColor = "";
+            selectedListItem.style.color = "";
+            
+        }
+
+        // set colors to selected list item
+        e.target.style.backgroundColor = "var(--Orange)";   
+        e.target.style.color = "var(--White)"; 
+        
+        // update the current selected list item
+        selectedListItem = e.target;
+    
     }
     console.log(e);
     switch(e.target.value) {
@@ -124,7 +139,7 @@ ul.addEventListener('click', e => {
 btn.addEventListener('click', () => {
         respond.style.display = "block";
 });
-}
+
 ```
 
 ## Author
